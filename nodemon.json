@@ -1,0 +1,8 @@
+{
+    "execMap": {
+      "ts": "bun"
+    },
+    "ignore": ["./src/out"],
+    "ext": "ts json css rnd txt md",
+    "legacyWatch": true
+}

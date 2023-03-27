@@ -1,0 +1,19 @@
+/* Add the pixel font */
+@font-face {
+    font-family: "Pixel";
+    src: url("./VT323.ttf") format("truetype");
+}  
+
+/* Body */
+body {
+    overflow: scroll;
+
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

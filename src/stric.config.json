@@ -1,0 +1,12 @@
+{
+    "dev": false,
+    "static": "public",
+    "page": {
+        "list": [
+            {
+                "path": "/game",
+                "source": "game.ts"
+            }
+        ]
+    }
+}

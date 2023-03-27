@@ -1,0 +1,19 @@
+{
+  "name": "stric-arrow",
+  "module": "index.ts",
+  "devDependencies": {
+    "bun-types": "latest",
+    "nodemon": "^2.0.22",
+    "@stricjs/pages": "latest"
+  },
+  "type": "module",
+  "dependencies": {
+    "@stricjs/arrow": "1.1.4",
+    "@stricjs/kit": "latest"
+  },
+  "scripts": {
+    "dev": "nodemon index.ts localhost 3000",
+    "start": "NODE_ENV=production bun index.ts"
+  },
+  "version": "0.0.1"
+}
