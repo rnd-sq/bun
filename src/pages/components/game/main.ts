@@ -18,7 +18,6 @@ export function block(y: number, havePlayer: boolean, type?: SquareType) {
         index="${y}"
     >${havePlayer ? playerDiv : ""}</div>`;
 }
-
 /**
  * Render the game with a player
  * @param player 
@@ -41,7 +40,7 @@ export function game(player: Player, sounds: Sounds) {
                         // Check the current player position
                         y, pos === player.pos,
                         player.struct[pos]?.[0]
-                    )
+                    );
                 })}
             </div>`
         ) : ""}

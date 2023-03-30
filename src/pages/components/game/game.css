@@ -1,3 +1,7 @@
+body {
+    align-content: center;
+}
+
 /* Game */
 #game {
     /* Variables */
@@ -21,7 +25,7 @@
 /** Game navbar */
 #game > nav {
     height: var(--nav-height);
-    width: 100%;
+    width: calc(100% - 24px);
 
     padding: var(--nav-padding);
     margin-bottom: var(--nav-space);
@@ -73,9 +77,8 @@
 
 /*** Game square */
 #game > .rw > .sq {
-    width: var(--sq-size);
-    height: var(--sq-size);
-
+    width: calc(var(--sq-size) - 2 * var(--sq-border));
+    height: calc(var(--sq-size) - 2 * var(--sq-border));
     margin: var(--sq-border);
 
     display: flex;
@@ -83,10 +86,8 @@
     align-items: center;
 }
 
-#game > .rw > .sq[type] {
-    width: calc(var(--sq-size) - var(--sq-border));
-    height: calc(var(--sq-size) - var(--sq-border));
-
+/**** Road */
+#game > .rw > .sq[type=a] {
     background-color: rgb(221, 218, 218);
 }
 

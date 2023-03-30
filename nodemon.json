@@ -2,7 +2,7 @@
     "execMap": {
       "ts": "bun"
     },
-    "ignore": ["./src/out"],
+    "ignore": ["./src/out", "./src/public"],
     "ext": "ts json css rnd txt md",
     "legacyWatch": true
 }

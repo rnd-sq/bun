@@ -2,7 +2,7 @@ import Stric from "@stricjs/kit";
 import { PageRouter } from "@stricjs/arrow";
 
 // This is a shorthand call, use all the options in ./src/stric.config.json
-await Stric.boot(new PageRouter({
+Stric.boot(new PageRouter({
     loader: { ".ttf": "file" }
 }));
 
