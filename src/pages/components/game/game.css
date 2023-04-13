@@ -65,49 +65,18 @@ body {
 }
 
 /** Game row */
-#game > .rw {
+.rw {
     display: flex;
 
     width: fit-content;
 }
 
-#game > .rw[index="0"] {
+.rw[index="0"] {
     margin-top: calc(var(--nav-height) + var(--nav-padding) * 2 + var(--nav-space));
 }
 
-/*** Game square */
-#game > .rw > .sq {
-    width: calc(var(--sq-size) - 2 * var(--sq-border));
-    height: calc(var(--sq-size) - 2 * var(--sq-border));
-    margin: var(--sq-border);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/**** Road */
-#game > .rw > .sq[type=a] {
-    background-color: rgb(221, 218, 218);
-}
-
-/**** Start pos */
-#game > .rw > .sq[type=c] {
-    background-color: black;
-}
-
-/**** X */
-#game > .rw > .sq[type=b] {
-    background-color: red;
-}
-
-/**** Finish pos */
-#game > .rw > .sq[type=d] {
-    background-color: lawngreen;
-}
-
 /**** Player */
-#game > .rw > .sq > #player {
+#game #player {
     background-color: yellow;
 
     width: var(--player-size);

@@ -1,26 +1,15 @@
 import { html } from "@stricjs/arrow/utils";
-import { game } from "./components/game/main";
+import game from "./components/game/main";
 import parse from "./game/parser";
 import { Direction, Player } from "./game/player";
+import { file } from "bun";
 
 export async function render() {
     // Create a player for the default rnd structure
-    const player = new Player(
-        await fetch("/default.rnd")
-            .then(v => v.text())
-            .then(parse)
-    );
-
-    // Play sounds
-    const sounds: Sounds = {
-        restart: new Audio("/sounds/restart.mp3"),
-        fail: new Audio("/sounds/fail.mp3"),
-        complete: new Audio("/sounds/complete.mp3"),
-        getmoves: new Audio("/sounds/getmoves.mp3"),
-    };
+    const player = new Player(parse(props));
 
     // Render the game and the player
-    html`${game(player, sounds)}`;
+    html`${game(player)}`;
 
     // Handle move events
     document.addEventListener("keyup", e => {
@@ -29,3 +18,11 @@ export async function render() {
         player.move(e.key as Direction);
     });
 }
+
+// Load map
+export function load() {
+    return file("./src/default.rnd").text();
+}
+
+export const title = "Game";
+export const description = "Main game";

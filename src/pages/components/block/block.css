@@ -1,0 +1,30 @@
+/*** Game square */
+.rw > .sq {
+    width: calc(var(--sq-size) - 2 * var(--sq-border));
+    height: calc(var(--sq-size) - 2 * var(--sq-border));
+    margin: var(--sq-border);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**** Road */
+.rw > .sq[type=a] {
+    background-color: rgb(221, 218, 218);
+}
+
+/**** Start pos */
+.rw > .sq[type=c] {
+    background-color: black;
+}
+
+/**** X */
+.rw > .sq[type=b] {
+    background-color: red;
+}
+
+/**** Finish pos */
+.rw > .sq[type=d] {
+    background-color: lawngreen;
+}
