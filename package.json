@@ -7,7 +7,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@stricjs/arrow": "1.1.6",
+    "@stricjs/arrow": "1.1.7",
     "@stricjs/kit": "^1.0.13"
   },
   "scripts": {
