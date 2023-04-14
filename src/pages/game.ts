@@ -4,7 +4,7 @@ import parse from "./game/parser";
 import { Direction, Player } from "./game/player";
 import { file } from "bun";
 
-export async function render() {
+export function render() {
     // Create a player for the default rnd structure
     const player = new Player(parse(props));
 
@@ -20,8 +20,8 @@ export async function render() {
 }
 
 // Load map
-export function load() {
-    return file("./src/default.rnd").text();
+export function fetch() {
+    return file("./src/internals/default.rnd").text();
 }
 
 export const title = "Game";
