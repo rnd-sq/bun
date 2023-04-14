@@ -1,16 +1,9 @@
 import Stric from "@stricjs/kit";
-import { PageRouter } from "@stricjs/arrow";
-import { plugin } from "bun";
+import { PageRouter, ignoreExts } from "@stricjs/arrow";
+import Bun from "bun";
 
 // Ignore mp3
-plugin({
-    setup(builder) {
-        builder.onLoad({ filter: /\.mp3$/ }, () => ({
-            exports: { "default": "" },
-            loader: "object"
-        }));
-    },
-})
+Bun.plugin(ignoreExts("mp3"));
 
 // This is a shorthand call, use all the options in ./src/stric.config.json
 Stric.boot(new PageRouter({
