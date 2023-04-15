@@ -1,6 +1,6 @@
 {
     "execMap": {
-      "ts": "bun"
+      "ts": "bun --log-level=silent"
     },
     "ignore": ["./src/out", "./src/public"],
     "ext": "ts json css rnd txt md",
