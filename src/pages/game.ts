@@ -26,3 +26,5 @@ export function fetch() {
 
 export const title = "Game";
 export const description = "Main game";
+
+export const path = "/game";
