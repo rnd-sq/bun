@@ -24,7 +24,9 @@ export function fetch() {
     return file("./src/internals/default.rnd").text();
 }
 
+// Page meta
 export const title = "Game";
 export const description = "Main game";
 
+// Path to handle
 export const path = "/game";
