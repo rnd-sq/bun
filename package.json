@@ -7,8 +7,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@stricjs/arrow": "^1.2.1",
-    "@stricjs/kit": "^1.0.17"
+    "@stricjs/arrow": "^2.0.0",
+    "@stricjs/kit": "^2.0.0"
   },
   "scripts": {
     "dev": "nodemon index.ts",
